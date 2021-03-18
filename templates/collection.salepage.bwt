@@ -1,0 +1,290 @@
+<div class="section wrap_background sale-page">
+	<div class="sale-page__banner ">
+		<img class="lazyload none-mb" src="{{ 'bnsalepage.jpg' | asset_url }}"  alt="{{ product.name }}">
+		<img class="lazyload block-mb" src="{{ 'bnmobile.jpg' | asset_url }}"  alt="{{ product.name }}">
+	</div>
+	<div class="container ">
+		<div class="bg_collection section">
+			<div class="row">
+				<div class="main_container collection col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					<div class="sale-page__page">
+						<a {%if page_title == 'happy-sale'%}class="active"{% endif %} href="/happy-sale">SET 690K</a>
+						<a {%if page_title == 'happy-sale-set-750k'%}class="active"{% endif %} href="/happy-sale-set-750k">set-750k</a>
+						<a {%if page_title == 'happy-sale-set-800k'%}class="active"{% endif %} href="/happy-sale-set-800k">SET 800k</a>
+						<a {%if page_title == 'happy-sale-set-1-trieu'%}class="active"{% endif %} href="/happy-sale-set-1-trieu">SET 1000k</a>
+					</div>
+					<ul class="sale-page__tab">
+						{%if page_title == 'happy-sale'%}
+							<li class="sale-page__tab-item active" id='happy-sale'>
+								<button class="active" data-content="giayy">
+									giày
+								</button>
+								<button data-content="vii">
+									ví
+								</button>
+								<button data-content="matkinh">
+									mắt kính
+								</button>
+								<button data-content="sneakers">
+									sneakers
+								</button>
+							</li>
+						{% elsif page_title == 'happy-sale-set-750k' %}
+							<li class="sale-page__tab-item" id='happy-sale-set-750k'>
+								<button class="active" data-content="tuinho">
+									túi nhỏ
+								</button>
+								<button data-content="sneakers">
+									sneakers
+								</button>
+								<button data-content="giayy">
+									giày
+								</button>
+								<button data-content="vii">
+									ví
+								</button>
+								<button data-content="matkinh">
+									mắt kính
+								</button>
+							</li>
+						{% elsif page_title == 'happy-sale-set-800k' %}
+							<li class="sale-page__tab-item" id='happy-sale-set-800k'>
+								<button class="active" data-content="tuilon">
+									túi lớn +
+								</button>
+								<button data-content="boots">
+									Boots - Sneakers 5-7cm
+								</button>
+								<button data-content="giayy">
+									giày
+								</button>
+								<button data-content="vii">
+									ví
+								</button>
+								<button data-content="matkinh">
+									mắt kính
+								</button>
+								<button data-content="sneakers">
+									sneakers
+								</button>
+							</li>
+						{% else %}
+							<li class="sale-page__tab-item" id='happy-sale-set-1-trieu'>
+								<button class="active" data-content="tuinho">
+									túi nhỏ +
+								</button>
+								<button data-content="sneakers">
+									Sneakers 5-7cm +
+								</button>
+								<button data-content="tuitrung">
+									túi trung
+								</button>
+								<button data-content="tuilon">
+									túi lớn
+								</button>
+								<button data-content="balo">
+									balo
+								</button>
+							</li>
+						{% endif %}
+					</ul>
+					<p class="sale-page__decs">
+						{%if page_title == 'happy-sale'%}
+							<span>Công thức tính SET 690k</span>: 1 Giày + Ví/Mắt kính/Sneakers 3cm<br/>
+                         Hoặc được mua cùng 2 sản phẩm trong các nhóm Giày, Ví, Mắt kính, Sneakers 3cm
+						{% elsif page_title == 'happy-sale-set-750k' %}
+							<span>Công thức tính SET 750k:</span> 1 Túi nhỏ + 1 Giày/Ví/Mắt kính/Sneakers 3cm
+						{% elsif page_title == 'happy-sale-set-800k' %}
+							<span>Công thức tính SET 800k:</span> 1 Túi lớn hoặc Boots - Sneakers 5-7cm + 1 Giày hoặc Ví hoặc Mắt kính hoặc Sneakers 3cm
+						{% else %}
+							<span>Công thức tính SET 1 triệu:</span> 1 Túi nhỏ hoặc Sneakers 5-7cm + 1 Túi trung hoặc Túi lớn hoặc Balo hoặc Túi nhỏ hoặc Sneakers 5-7cm
+						{% endif %}
+						
+					</p>
+					<div class="category-products products">
+						{% paginate collection.products by settings.collection_number_product %}
+						
+						{% if collection.products.size > 0 %}
+						{%include 'products-grid-item'%}
+						{% else %}
+						<div class="section">
+							<div class="alert alert-warning alert-dismissible margin-top-15 section" role="alert">
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+								Sản phẩm đang được cập nhật.
+							</div>
+						</div>
+						{% endif %}
+						{% endpaginate %}
+					</div>
+					<div id="open-filters" class="open-filters hidden-lg">
+						<i class="fa fa-filter"></i>
+						<span>Lọc</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sale-page__bot">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4">
+					<h4>
+						GỌI MUA HÀNG ONLINE (08:00 - 21: 00 mỗi ngày)
+					</h4>
+					<div class="infoContent">
+						<p>
+							<span class="titleHotline"><a href="tel:1800 1162">1800 1162</a></span>
+							<span class="moreInfoFooter">Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</span>					
+						</p>
+					</div>
+
+					<h4  class="xxx">
+						GÓP Ý &amp; KHIẾU NẠI (08:30 - 20:30)
+					</h4>
+					<div class="infoContent mt-4">
+						<p>
+							<span class="titleHotline"><a href="tel:1800 1160">1800 1160</a></span>
+							<span class="moreInfoFooter">Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</span>					
+						</p>
+					</div>
+
+
+					<h4 class="vvv">
+						Đăng kí nhận thông tin ưu đãi
+					</h4>
+					{%if settings.use_newsletter%}
+					<div class="form_register">
+						<form id="mc-form" class="newsletter-form d-flex align-items-stretch" data-toggle="validator">
+							<input aria-label="Địa chỉ Email" type="email" placeholder="Nhập địa chỉ email"  name="EMAIL" required autocomplete="off" >
+							<button class="button_subscribe subscribe" type="submit" aria-label="Đăng ký nhận tin" name="subscribe">Đăng ký</button>
+						</form>
+						<div class="mailchimp-alerts ">
+							<div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+							<div class="mailchimp-success"></div><!-- mailchimp-success end -->
+							<div class="mailchimp-error"></div><!-- mailchimp-error end -->
+						</div>
+					</div>
+					<script>
+						$('#mc-form').ajaxChimp({
+							language: 'en',
+							callback: mailChimpResponse,
+							url: '{{ settings.newsletter_form_action }}'
+						});
+						function mailChimpResponse(resp) {
+							if (resp.result === 'success') {
+								if(resp.msg == 'Thank you for subscribing!'){
+									$('.mailchimp-success').html('Cảm ơn bạn đã đăng ký!').fadeIn(900);
+								}else{
+									$('.mailchimp-success').html('' + resp.msg).fadeIn(900);
+								}
+								$('.mailchimp-error').fadeOut(100);
+							} else if (resp.result === 'error') {
+								if(resp.msg == '0 - Please enter a value'){
+									$('.mailchimp-error').html('Vui lòng nhập các trường thông tin').fadeIn(900);
+								}else if(resp.msg == '0 - An email address must contain a single @'){
+									$('.mailchimp-error').html('Địa chỉ email phải chứa ký tự @').fadeIn(900);
+								}else if(resp.msg == 'This email cannot be added to this list. Please enter a different email address.'){
+									$('.mailchimp-error').html('Email này không thể được thêm vào danh sách này. Vui lòng nhập một địa chỉ email khác.').fadeIn(900);
+								}else if(resp.msg.includes('0 - The domain portion of the email address is invalid')){
+									$('.mailchimp-error').html('Phần tên miền của địa chỉ email không hợp lệ').fadeIn(900);
+								}else if(resp.msg.includes('0 - The username portion of the email address is empty')){
+									$('.mailchimp-error').html('Phần tên người dùng của địa chỉ email trống').fadeIn(900);
+								}else if(resp.msg.includes('0 - The username portion of the email address is invalid')){
+									$('.mailchimp-error').html('Phần tên người dùng của địa chỉ email không hợp lệ').fadeIn(900);
+								}else if(resp.msg == 'Thank you for subscribing!'){
+									$('.mailchimp-error').html('Cảm ơn bạn đã đăng ký!').fadeIn(900);
+								}else{
+									$('.mailchimp-error').html('' + resp.msg).fadeIn(900);
+								}
+							}
+						}
+					</script>
+					{%else%}
+					<ul class="list-menu toggle-mn" style="display:none;">
+						{% for link in linklists[c4_menu].links %}
+						<li class="li_menu">
+							<a href="{{ link.url }}">{{ link.title }}</a>
+						</li>
+						{% endfor %}
+					</ul>
+					{%endif%}	
+				</div>
+				<div class="col-xs-12 col-sm-4 site-animation">
+					<h4>
+						HỆ THỐNG SHOWROOM
+					</h4>
+					<ul>
+						<a class="link-showroom-home" href="/blogs/he-thong-cua-hang">
+							<img src="https://file.hstatic.net/1000003969/file/showroom-duoi-700x330_905a99aac7a64b0a892b7dbe67e56de8.jpg" alt="Store">
+						</a>
+						<a class="store_bellow_link" href="/blogs/he-thong-cua-hang">Xem địa chỉ hệ thống 80 showroom<i class="fa fa-caret-right"></i></a>
+					</ul>	
+				</div>
+				<div class="col-xs-12 col-sm-4 site-animation">
+					<h4>
+						FANPAGE CỦA CHÚNG TÔI
+					</h4>
+
+					<a data-eventlabel="facebook" class="link-fp-fb" href="https://www.facebook.com/giayjuno/">
+							<img src="https://file.hstatic.net/1000003969/file/website-700x330_b194b7660e324d008c6e21a5f497d6c8.jpg" alt="Fanpage">
+						</a>
+					<div class="social-footer">
+						<h4 class="title-menu">
+							{{c5_title}} 
+						</h4>
+						<ul class="follow_option d-flex align-items-center">	
+							{% if settings.social_facebook_link != blank %}
+							<li>
+								<a class="facebook" href="{{settings.social_facebook_link}}" title="Theo dõi Facebook {{store.name}}"><i class="fab fa-facebook-f"></i></a>
+							</li>
+							{% endif %}
+							{% if settings.social_twitter_link != blank %}
+							<li>
+								<a class="twitter" href="{{settings.social_twitter_link}}" title="Theo dõi Twitter {{store.name}}"><i class="fab fa-twitter"></i></a>
+							</li>
+							{% endif %}
+							{% if settings.social_behance_link != blank %}
+							<li>
+								<a class="behance" href="{{settings.social_behance_link}}" title="Theo dõi Behance {{store.name}}"><i class="fab fa-behance"></i></a>
+							</li>
+							{% endif %}
+							{% if settings.social_instagram_link != blank %}
+							<li>
+								<a class="instgram" href="{{settings.social_instagram_link}}" title="Theo dõi instgram {{store.name}}"><i class="fab fa-instagram"></i></a>
+							</li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sale-page__modal">
+		<div class="modal-content">
+			<h3>
+				<span class="text">đã xem</span>
+				<span class="control">
+					<i>-</i>
+					<i>x</i>
+				</span>
+				
+			</h3>
+			<div class="modal-content__wrap">
+				<div class="modal-content__list">
+			
+				</div>
+			</div>
+		</div>
+		<span class="arrow"><</span>
+	</div>
+</div>
+<script>
+	var colName = "{%if page_title == 'All'%}Tất cả sản phẩm{%else%}{{ page_title }}{%endif%}";
+	{% if collection.id > 0 %}
+	var colId = {{collection.id}};
+	{%else%}
+	var colId = 0;
+	{%endif%}
+
+	var selectedViewData = "{% if template contains '.list' %}data_list{% else %}data{% endif %}";
+</script>
