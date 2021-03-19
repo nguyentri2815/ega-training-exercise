@@ -61,4 +61,4 @@
     - Lưu:bấm lưu khi điển xong các mục trên
     - Xóa sản phẩm:bấm xóa để xóa sản phẩm đang tạo
     - Có thể vào danh mục sản phẩm chọn nhiều sản phẩm cần thao tác(xóa ,hiển thị,không thiển thị, thêm tag, xóa tag)
-- **link demo** :[link demo](https://github.com/nguyentri2815/ega-training-exercise/tree/develop)
+- **link demo** :[link demo](https://tri-nguyen-egany.mysapo.net/happy-sale)
