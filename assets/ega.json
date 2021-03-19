@@ -1,0 +1,15 @@
+{
+  "version": "1",
+  "packages": {},
+  "pages": {},
+  "blogs": {},
+  "articles": {},
+  "egaTheme": {
+    "ega-training-exercise": {
+      "name": "ega-training-exercise",
+      "version": "v1.1.0"
+    }
+  }
+}
+
+
